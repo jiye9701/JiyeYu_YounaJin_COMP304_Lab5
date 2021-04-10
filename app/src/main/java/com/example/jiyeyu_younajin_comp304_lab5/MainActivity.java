@@ -57,9 +57,9 @@ public class MainActivity extends AppCompatActivity {
                 Restaurant[] restaurants = new Restaurant[5];
                 restaurants[0] = new Restaurant("Onnki Donburi", "Korean", "40 Hayden St", R.drawable.korea, R.drawable.korea, 43.669971, -79.384590);
                 restaurants[1] = new Restaurant("Nomé Izakaya", "Japanese", "4848 Young St", R.drawable.japan, R.drawable.japan, 36.204823, 138.252930);
-                restaurants[2] = new Restaurant("B", "Italian", "40 Hayden St3", R.drawable.italy, R.drawable.italy, 41.871941, 12.567380);
-                restaurants[3] = new Restaurant("C", "Chinese", "40 Hayden St4", R.drawable.china, R.drawable.china, 45.36694434346996, 137.29509282253906);
-                restaurants[4] = new Restaurant("D", "French", "40 Hayden St5", R.drawable.france, R.drawable.france, 33.39828969425322, 126.5866119652072);
+                restaurants[2] = new Restaurant("Carisma", "Italian", "15 Toronto St", R.drawable.italy, R.drawable.italy, 43.65054791107293, -79.3758827520356);
+                restaurants[3] = new Restaurant("Swatow Restaurant", "Chinese", "309 Spadina Ave", R.drawable.china, R.drawable.china, 43.65537528580339, -79.39797830372721);
+                restaurants[4] = new Restaurant("Le Sélect Bistro", "French", "432 Wellington St W", R.drawable.france, R.drawable.france, 43.645868052678495, -79.39703417463498);
 
                 for (int i = 0; i < restaurants.length; i++) {
                     MainActivity.myAppDB.myDao().addRestaurant(restaurants[i]);
