@@ -16,6 +16,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private GoogleMap mMap;
     Restaurant restaurant = MainActivity.myAppDB.myDao().getRestaurantsById(MainActivity.selectedRestaurantId);
     double latitude, longitude;
+    String title, snippet;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +26,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         //latitude and longitude for restaurant location
         latitude = restaurant.getLatitude();
         longitude = restaurant.getLongitude();
+        title = restaurant.getTitle();
+        snippet = restaurant.getSnippet();
 
         
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
@@ -55,8 +58,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         MarkerOptions marker = new MarkerOptions();
         marker .position(new LatLng(latitude, longitude))
                 //임시로 2번기준으로만
-                .title("Nomé Izakaya")
-                .snippet("4848 Yonge St, North York, ON M2N 5N2");
+                .title(title)
+                .snippet(snippet);
         googleMap.addMarker(marker).showInfoWindow();
 
 
