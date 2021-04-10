@@ -28,13 +28,8 @@ public class Restaurant {
     @ColumnInfo(name = "longitude")
     private double longitude;
 
-    @ColumnInfo(name = "title")
-    private String title;
-    @ColumnInfo(name = "snippet")
-    private String snippet;
-
     public Restaurant(String name, String cuisine, String address, int flagImg, int restaurantImg
-                        , double latitude, double longitude, String title, String snippet)
+                        , double latitude, double longitude)
     {
         this.restaurantId = idCounter++;
         this.name = name;
@@ -44,8 +39,6 @@ public class Restaurant {
         this.restaurantImg = restaurantImg;
         this.latitude = latitude;
         this.longitude = longitude;
-        this.title = title;
-        this.snippet =snippet;
     }
     public Restaurant()
     {
@@ -99,20 +92,4 @@ public class Restaurant {
     public double getLongitude() { return longitude; }
 
     public void setLongitude(double longitude) { this.longitude = longitude; }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getSnippet() {
-        return snippet;
-    }
-
-    public void setSnippet(String snippet) {
-        this.snippet = snippet;
-    }
 }

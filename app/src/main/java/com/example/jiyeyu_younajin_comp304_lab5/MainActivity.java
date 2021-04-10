@@ -55,11 +55,11 @@ public class MainActivity extends AppCompatActivity {
         if (MainActivity.myAppDB.myDao().getAllRestaurants().isEmpty()) {
             try {
                 Restaurant[] restaurants = new Restaurant[5];
-                restaurants[0] = new Restaurant("Onnki Donburi", "Korean", "40 Hayden St", R.drawable.korea, R.drawable.korea, 43.669971, -79.384590,"Onnki Donburi","40 Hayden St, Toronto, ON M4Y 1V8");
-                restaurants[1] = new Restaurant("Nomé Izakaya", "Japanese", "4848 Young St", R.drawable.japan, R.drawable.japan, 43.764272195905704, -79.41048152437747,"Nomé Izakaya","4848 Yonge St, North York, ON M2N 5N2");
-                restaurants[2] = new Restaurant("Carisma", "Italian", "15 Toronto St", R.drawable.italy, R.drawable.italy, 43.65054791107293, -79.3758827520356,"Carisma","15 Toronto St, Toronto, ON M5C 2E3");
-                restaurants[3] = new Restaurant("Swatow Restaurant", "Chinese", "309 Spadina Ave", R.drawable.china, R.drawable.china, 43.65537528580339, -79.39797830372721,"Swatow Restaurant","309 Spadina Ave., Toronto, ON M5T 1H1");
-                restaurants[4] = new Restaurant("Le Sélect Bistro", "French", "432 Wellington St W", R.drawable.france, R.drawable.france, 43.645868052678495, -79.39703417463498,"Le Sélect Bistro","432 Wellington St W, Toronto, ON M5V 1E3");
+                restaurants[0] = new Restaurant("Onnki Donburi", "Korean", "40 Hayden St", R.drawable.korea, R.drawable.korea, 43.669971, -79.384590);
+                restaurants[1] = new Restaurant("Nomé Izakaya", "Japanese", "4848 Young St", R.drawable.japan, R.drawable.japan, 36.204823, 138.252930);
+                restaurants[2] = new Restaurant("Carisma", "Italian", "15 Toronto St", R.drawable.italy, R.drawable.italy, 43.65054791107293, -79.3758827520356);
+                restaurants[3] = new Restaurant("Swatow Restaurant", "Chinese", "309 Spadina Ave", R.drawable.china, R.drawable.china, 43.65537528580339, -79.39797830372721);
+                restaurants[4] = new Restaurant("Le Sélect Bistro", "French", "432 Wellington St W", R.drawable.france, R.drawable.france, 43.645868052678495, -79.39703417463498);
 
                 for (int i = 0; i < restaurants.length; i++) {
                     MainActivity.myAppDB.myDao().addRestaurant(restaurants[i]);
