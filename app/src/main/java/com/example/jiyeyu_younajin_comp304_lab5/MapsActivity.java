@@ -47,20 +47,16 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap = googleMap;
 
         // Add a marker in Sydney and move the camera
-        LatLng restaurant = new LatLng(latitude, longitude);
+        LatLng currentLocation = new LatLng(latitude, longitude);
+//
+//        mMap.moveCamera(CameraUpdateFactory.newLatLng(currentLocation));
+//        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(currentLocation, 16));
 
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(restaurant));
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(restaurant, 16));
-
-        MarkerOptions marker = new MarkerOptions();
-        marker .position(new LatLng(latitude, longitude))
-                //임시로 2번기준으로만
-                .title("Nomé Izakaya")
-                .snippet("4848 Yonge St, North York, ON M2N 5N2");
-        googleMap.addMarker(marker).showInfoWindow();
-
-
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(restaurant));
-
+        MarkerOptions markerOptions = new MarkerOptions();
+        markerOptions.position(currentLocation);
+        markerOptions.title(restaurant.getName());
+        markerOptions.snippet(restaurant.getAddress());
+        mMap.addMarker(markerOptions);
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(currentLocation, 18));
     }
 }

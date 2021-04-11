@@ -1,11 +1,4 @@
 <resources>
     <string name="app_name">JiyeYu_YounaJin_COMP304_Lab5</string>
     <string name="title_activity_maps">Map</string>
-
-    <string-array name="starr">
-        <item>Italian</item>
-        <item>Greek</item>
-        <item>Chinese</item>
-        <item>Indian</item>
-    </string-array>
 </resources>
