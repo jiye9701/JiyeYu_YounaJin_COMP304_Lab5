@@ -27,7 +27,7 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="@string/jiye_google_maps_key" />
+            android:value="@string/google_maps_key" />
         <!--CHANGE TO YOUR API as jiye_google_maps_key or young_google_maps_key-->
 
         <activity

@@ -33,7 +33,7 @@ public class RestaurantList extends ArrayAdapter{
         ImageView imgRestaurant = (ImageView)item.findViewById(R.id.img_restaurant);
         Restaurant restaurant = restaurants[position];
         txtRestaurant.setText(restaurant.getName());
-        imgRestaurant.setImageResource(restaurant.getFlagImg());
+        imgRestaurant.setImageResource(restaurant.getRestaurantImg());
 
         return item;
     }

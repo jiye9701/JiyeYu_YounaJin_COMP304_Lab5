@@ -44,7 +44,7 @@ public class RestaurantListActivity extends AppCompatActivity {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                     MainActivity.selectedRestaurantId = restaurants[position].getRestaurantId();
-                    Toast.makeText(getApplicationContext(), Integer.toString(MainActivity.selectedRestaurantId), Toast.LENGTH_LONG).show();
+                    //Toast.makeText(getApplicationContext(), Integer.toString(MainActivity.selectedRestaurantId), Toast.LENGTH_LONG).show();
                     startActivity(new Intent(view.getContext(), LocationActivity.class));
                 }
             });
